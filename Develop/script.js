@@ -1,4 +1,4 @@
-// Assignment code here
+
 letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 character = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", " > ", " ? ", "@", "[", "\\", "]", " ^ ", "_", "`", "{", "|", "}", "~"];
 numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -16,8 +16,12 @@ var lettersToUpperCase = function (x) {
   return x.toUpperCase();
 }
 letters2 = letters.map(lettersToUpperCase);
-// Get references to the #generate element
+
 var generateBtn = document.querySelector("#generate");
+
+
+
+//-----------Button to generate the password-----------//
 
 generateBtn.addEventListener("click", function () {
 passWord1 = writePassword();
@@ -101,11 +105,14 @@ var passWord1 = pswrd.join("");
 return passWord1;
 }
 
+
+//------Displays Password Onto Page------//
+
 function UserInput(passWord1) {
   document.getElementById("password").textContent = passWord1;
 }
 
 
-// Add event listener to generate button
+
 
 
