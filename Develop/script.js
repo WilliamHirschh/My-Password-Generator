@@ -9,6 +9,8 @@ var selectNumber;
 var selectUpper;
 var selectLower;
 var selectCharacter;
+var enter;
+var usersChoice;
 let passwordDisplay = document.getElementById("password")
 var lettersToUpperCase = function (x) {
   return x.toUpperCase();
@@ -59,52 +61,49 @@ function writePassword() {
     }
 
     else if (selectCharacter && selectNumber) {
-      choices = character.concat(number);
+      usersChoice = characters.concat(numbers);
 
   } else if (selectCharacter && selectLower) {
-      choices = character.concat(alpha);
+    usersChoice = characters.concat(letters);
 
-  } else if (selectharacter && selectUpper) {
-      choices = character.concat(alpha2);
+  } else if (selectCharacter && selectUpper) {
+    usersChoice = characters.concat(letters2);
   }
   else if (selectLower && selectNumber) {
-      choices = alpha.concat(number);
+    usersChoice = letters.concat(numbers);
 
   } else if (selectLower && selectUpper) {
-      choices = alpha.concat(alpha2);
+    usersChoice = letters.concat(letters2);
 
   } else if (selectNumber && selectUpper) {
-      choices = number.concat(alpha2);
+    usersChoice = numbers.concat(letters2);
   }
   
   else if (selectCharacter) {
-      choices = character;
+    usersChoice = selectCharacter;
   }
   else if (selectNumber) {
-      choices = number;
+    usersChoice = selectNumber;
   }
   else if (selectLower) {
-      choices = alpha;
+    usersChoice = letters;
   }
   else if (selectUpper) {
-      choices = space.concat(alpha2);
+    usersChoice = space.concat(letters2);
   };
 var pswrd = [];
+
 for (var i = 0; i < enter; i++) {
   var pickedPassword = usersChoice[Math.floor(Math.random() * usersChoice.length)];
   pswrd.push(pickedPassword);
 }
 
-
-passwordText.value = passWord1;
 var passWord1 = pswrd.join("");
-UserInput(passWord1);
-var passwordText = document.querySelector("#password");
-console.log(writePassword())
 return passWord1;
 
 }
-
+writePassword()
+console.log(writePassword())
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
