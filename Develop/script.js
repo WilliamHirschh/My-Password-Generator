@@ -52,7 +52,7 @@ function writePassword() {
     else if (selectNumber && selectLower && selectCharacter) {
       usersChoice = character.concat(numbers, letters)
     } 
-    else if (selectCharacter && letterLower && letterUpper) {
+    else if (selectCharacter && selectLower && selectUpper) {
       usersChoice = character.concat(letters, letters2);
     }
     else if (selectCharacter && selectLower && letterUpper) {
@@ -60,13 +60,13 @@ function writePassword() {
     }
 
     else if (selectCharacter && selectNumber) {
-      usersChoice = characters.concat(numbers);
+      usersChoice = character.concat(numbers);
 
   } else if (selectCharacter && selectLower) {
-    usersChoice = characters.concat(letters);
+    usersChoice = character.concat(letters);
 
   } else if (selectCharacter && selectUpper) {
-    usersChoice = characters.concat(letters2);
+    usersChoice = character.concat(letters2);
   }
   else if (selectLower && selectNumber) {
     usersChoice = letters.concat(numbers);
@@ -79,10 +79,10 @@ function writePassword() {
   }
   
   else if (selectCharacter) {
-    usersChoice = selectCharacter;
+    usersChoice = Character;
   }
   else if (selectNumber) {
-    usersChoice = selectNumber;
+    usersChoice = numbers;
   }
   else if (selectLower) {
     usersChoice = letters;
@@ -99,7 +99,10 @@ for (var i = 0; i < enter; i++) {
 
 var passWord1 = pswrd.join("");
 return passWord1;
+}
 
+function UserInput(passWord1) {
+  document.getElementById("password").textContent = passWord1;
 }
 
 console.log(writePassword())
