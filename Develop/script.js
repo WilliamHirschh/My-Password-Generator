@@ -3,7 +3,7 @@ letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n",
 character = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", " > ", " ? ", "@", "[", "\\", "]", " ^ ", "_", "`", "{", "|", "}", "~"];
 numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-var usersChoice;
+
 var enter;
 var selectNumber;
 var selectUpper;
@@ -38,7 +38,6 @@ function writePassword() {
     selectCharacter = confirm("Would you like special characters?");
   };
   
-
   if (!selectNumber && !selectUpper && !selectLower && !selectCharacter) {
     usersChoice = alert("Please choose one of the options");
   }
@@ -102,7 +101,7 @@ var passWord1 = pswrd.join("");
 return passWord1;
 
 }
-writePassword()
+
 console.log(writePassword())
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
