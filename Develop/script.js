@@ -105,7 +105,7 @@ function UserInput(passWord1) {
   document.getElementById("password").textContent = passWord1;
 }
 
-console.log(writePassword())
+
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+
 
