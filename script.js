@@ -20,7 +20,7 @@ letters2 = letters.map(lettersToUpperCase);
 var generateBtn = document.querySelector("#generate");
 
 
-
+//
 //-----------Button to generate the password-----------//
 
 generateBtn.addEventListener("click", function () {
